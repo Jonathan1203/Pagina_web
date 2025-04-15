@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Jonathan</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">X</button>
+        <nav>
+            <ul>
+                <li><a href="#index">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#seccion-ejemplo">Sección de Ejemplo</a></li>
+                <li><a href="#otra-seccion">Otra Sección</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <header>
+        <h1>Página de Jonathan</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#index">Inicio</a></li>
+                <li><a href="#carrito">Carrito de Compras</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider" id="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="assets/images/slide1.jpg" alt="Slide 1">
+                <div class="caption">
+                    <h2>Bienvenido a Mi Página</h2>
+                    <p>Explora contenido interesante y útil.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slide2.jpg" alt="Slide 2">
+                <div class="caption">
+                    <h2>Productos Destacados</h2>
+                    <p>Descubre nuestros productos más populares.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/images/slide3.jpg" alt="Slide 3">
+                <div class="caption">
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para ayudarte.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <main id="index">
+        <p>¡Hola! Esta es una página web de ejemplo. Puedes personalizarla como desees.</p>
+    </main>
+    <section id="seccion-ejemplo">
+        <h2>Sección de Ejemplo</h2>
+        <p>Esta es una sección de ejemplo donde puedes agregar más contenido.</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/images/lib1.jpg" alt="Producto 1" onclick="openModal('assets/images/lib1.jpg')">
+                <h3>Producto 1</h3>
+                <p>Detalles del producto 1.</p>
+                <p class="price">$10.00</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/lib1.jpg" alt="Producto 2" onclick="openModal('assets/images/lib1.jpg')">
+                <h3>Producto 2</h3>
+                <p>Detalles del producto 2.</p>
+                <p class="price">$20.00</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/lib1.jpg" alt="Producto 3" onclick="openModal('assets/images/lib1.jpg')">
+                <h3>Producto 3</h3>
+                <p>Detalles del producto 3.</p>
+                <p class="price">$30.00</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/lib1.jpg" alt="Producto 4" onclick="openModal('assets/images/lib1.jpg')">
+                <h3>Producto 4</h3>
+                <p>Detalles del producto 4.</p>
+                <p class="price">$40.00</p>
+            </div>
+        </div>
+    </section>
+    <section id="otra-seccion">
+        <h2>Otra Sección</h2>
+        <p>Aquí puedes agregar más información o enlaces.</p>
+        <a href="https://www.ejemplo.com">Visitar Ejemplo</a>
+    </section>
+    <section id="contacto" class="contact-form">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="submit-button">
+            </div>
+        </form>
+    </section>
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+    <footer>
+        <p>&copy; 2023 Mi Página Web</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

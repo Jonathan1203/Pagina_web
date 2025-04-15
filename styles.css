@@ -1,0 +1,457 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background: #0078d7;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0078d7;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style: disc inside;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+section a {
+    color: #0078d7;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.contact-form {
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background: #005bb5;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #9dcef7;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Menu Button */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1001;
+}
+
+.menu-btn:hover {
+    background: #005bb5;
+}
+
+/* Slider Styling */
+.slider {
+    position: relative;
+    max-width: 80%; /* Cambia el ancho máximo del slider (ajustable) */
+    margin: 20px auto; /* Centra el slider horizontalmente */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    justify-content: center; /* Centra los slides horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: none; /* Oculta todos los slides por defecto */
+}
+
+.slide.active {
+    display: block; /* Muestra solo el slide activo */
+}
+
+.slide img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del slider */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block;
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+    object-fit: cover; /* Asegura que las imágenes llenen el espacio del slider */
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.caption h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.caption p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Product Grid Styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta automáticamente las columnas */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    margin-top: 20px;
+}
+
+/* Product Card Styling */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0078d7;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Alinea las opciones a la derecha */
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 20px; /* Añade un margen desde el borde derecho */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaciado entre las opciones */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fff; /* Color del texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #005bb5; /* Fondo al pasar el cursor */
+    color: #fff;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 80%; /* Ajusta el tamaño máximo de la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff0000; /* Cambia el color al pasar el cursor */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar el header */
+    header {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+    }
+
+    /* Ajustar la barra de navegación */
+    .navbar {
+        justify-content: center; /* Centra las opciones en pantallas pequeñas */
+        padding-right: 0;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Cambia las opciones a una columna */
+        gap: 10px; /* Reduce el espacio entre las opciones */
+    }
+
+    .navbar ul li a {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        padding: 8px 10px;
+    }
+
+    /* Ajustar el slider */
+    .slider {
+        max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .slide img {
+        object-fit: contain; /* Asegura que las imágenes se ajusten sin recortarse */
+    }
+
+    /* Ajustar la cuadrícula de productos */
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 15px; /* Reduce el espacio entre las tarjetas */
+    }
+
+    .product-card {
+        padding: 10px; /* Reduce el padding de las tarjetas */
+    }
+
+    .product-card h3 {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+
+    .product-card p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    .product-card .price {
+        font-size: 1rem; /* Reduce el tamaño del precio */
+    }
+
+    /* Ajustar el footer */
+    footer {
+        font-size: 0.8rem; /* Reduce el tamaño del texto del footer */
+        padding: 10px 0;
+    }
+}
